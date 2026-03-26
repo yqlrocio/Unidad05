@@ -6,13 +6,10 @@ public class HoraExacta {
 	protected int seg;
 
     // Constructor
-    public HoraExacta(int hora, int min, int seg) {
+    HoraExacta(int hora, int min, int seg) {
         super(hora, min); // llama al constructor de la superclase Hora
-        if (seg >= 0 && seg <= 59) {
             this.seg = seg;
-        } else {
-            throw new IllegalArgumentException("Segundos inválidos");
-        }
+        
     }
 
     // Setter de segundos
@@ -27,6 +24,7 @@ public class HoraExacta {
     // Incrementa un segundo
     @Override
     public void inc() {
+    	
     	seg++;
         if (seg == 60) {
         	seg = 0;

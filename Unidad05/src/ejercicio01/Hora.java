@@ -6,10 +6,10 @@ public class Hora {
 	 protected int min; 
 	
 	// Constructor
-	    public Hora(int hora, int minutos) {
-	        if (hora >= 0 && hora <= 23 && minutos >= 0 && minutos <= 59) {
+	 Hora(int hora, int min) {
+	        if (hora >= 0 && hora <= 23 && min >= 0 && min <= 59) {
 	            this.hora = hora;
-	            this.min = minutos;
+	            this.min = min;
 	        } else {
 	            throw new IllegalArgumentException("Hora o minutos inválidos");
 	        }
