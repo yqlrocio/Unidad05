@@ -5,38 +5,61 @@ public class Hora {
 	 protected int hora;
 	 protected int min; 
 	
-	 Hora(int hora, int min) {
-		this.hora = hora;
-		this.min = min;
-	 }
+	// Constructor
+	    public Hora(int hora, int minutos) {
+	        if (hora >= 0 && hora <= 23 && minutos >= 0 && minutos <= 59) {
+	            this.hora = hora;
+	            this.min = minutos;
+	        } else {
+	            throw new IllegalArgumentException("Hora o minutos inválidos");
+	        }
+	    }
 
-	 // GETTERS Y SETTERS
-	 public int getHora() {
-		 return hora;
-	 }
+	    // Incrementa un minuto
+	    public void inc() {
+	    	min++;
+	        if (min == 60) {
+	        	min = 0;
+	            hora++;
+	            if (hora == 24) {
+	                hora = 0;
+	            }
+	        }
+	    }
 
-	 public int getMin() {
-		 return min;
-	 }
+	    // Setter de minutos
+	    public boolean setMinutos(int valor) {
+	        if (valor >= 0 && valor <= 59) {
+	            this.min = valor;
+	            return true;
+	        }
+	        return false;
+	    }
 
-	 public void setHora(int hora) {
-		 if (hora >= 0 && hora <59) {
-			 this.hora = hora;
-		} else {
-			System.out.println("Hora incorrecto");
-		}
+	    // Setter de hora
+	    public boolean setHora(int valor) {
+	        if (valor >= 0 && valor <= 23) {
+	            this.hora = valor;
+	            return true;
+	        }
+	        return false;
+	    }
+	    
+	    // Getters de hora
+	    public int getHora() {
+	        return hora;
+	    }
+
+	    // Getters de minutos
+	    public int getMin() {
+	        return min;
+	    }
+
+
+	    // Representación en String
+	    @Override
+	    public String toString() {
+	        // Formato con dos dígitos en minutos
+	        return String.format(hora + ":" + min);
+	    }
 	}
-
-	 public void setMin(int min) {
-		if (min >= 0 && min <59) {
-			 this.min = min;
-		} else {
-			System.out.println("Minuto incorrecto");
-		}
-	 }
-	 
-	 /**
-	  * 
-	  */
-		
-}
