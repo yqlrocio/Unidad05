@@ -1,14 +1,14 @@
 package ejercicio01;
 
 
-public class HoraExacta {
+public class HoraExacta extends Hora {
 
 	protected int seg;
 
     // Constructor
     HoraExacta(int hora, int min, int seg) {
         super(hora, min); // llama al constructor de la superclase Hora
-            this.seg = seg;
+        setSegundo(seg);
         
     }
 
