@@ -14,12 +14,15 @@ public class HoraExacta extends Hora {
 
     // Setter de segundos
     public boolean setSegundo(int valor) {
-        if (valor >= 0 && valor <= 59) {
-            this.seg = valor;
-            return true;
-        }
-        return false;
-    }
+       boolean esValido = valor >= 0 && valor <= 59; 
+       
+       if (esValido) {
+    	   this.seg = valor; 
+       }
+       
+       return esValido;
+    	}
+    
 
     // Incrementa un segundo
     @Override
@@ -32,7 +35,7 @@ public class HoraExacta extends Hora {
         }
     }
 
-    // Representación en String
+    // String
     @Override
     public String toString() {
         return String.format(super.getHora() + ":" + super.getMin() + ":" + seg);

@@ -11,11 +11,11 @@ public class Hora {
 	            this.hora = hora;
 	            this.min = min;
 	        } else {
-	            throw new IllegalArgumentException("Hora o minutos inválidos");
+	            System.out.println("Hora o minutos inválidos");
 	        }
 	    }
 
-	    // Incrementa un minuto
+	    // Incrementa un minuto/hora
 	    public void inc() {
 	    	min++;
 	        if (min == 60) {
@@ -29,21 +29,26 @@ public class Hora {
 
 	    // Setter de minutos
 	    public boolean setMinutos(int valor) {
-	        if (valor >= 0 && valor <= 59) {
+	        boolean esValido = valor >= 0 && valor <= 59;
+
+	        if (esValido) {
 	            this.min = valor;
-	            return true;
 	        }
-	        return false;
+
+	        return esValido;
 	    }
 
 	    // Setter de hora
 	    public boolean setHora(int valor) {
-	        if (valor >= 0 && valor <= 23) {
-	            this.hora = valor;
-	            return true;
-	        }
-	        return false;
+	       boolean esValido = valor >=0 && valor <= 59; 
+	       
+	       if (esValido) {
+	    	   this.hora = valor; 
+	       }
+	       
+	       	return esValido;
 	    }
+	    	
 	    
 	    // Getters de hora
 	    public int getHora() {
@@ -56,7 +61,7 @@ public class Hora {
 	    }
 
 
-	    // Representación en String
+	    // String
 	    @Override
 	    public String toString() {
 	        // Formato con dos dígitos en minutos
