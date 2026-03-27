@@ -1,7 +1,8 @@
 package ejercicio03;
 
 public class Producto {
-    protected String nombre;
+    
+	protected String nombre;
     protected double precio;
 
     public Producto(String nombre, double precio) {
@@ -9,6 +10,7 @@ public class Producto {
         this.precio = precio;
     }
 
+    // GETTERS Y SETTERS
     public String getNombre() { 
     	return nombre; 
     }
@@ -53,18 +55,18 @@ public class Producto {
         @Override
         public double calcular(int cantidad) {
             double total = super.calcular(cantidad);
+            double divisor = 1;
 
             if (diasACaducar == 1) {
-                return total / 4;
+                divisor = 4;
             } else if (diasACaducar == 2) {
-                return total / 3;
+                divisor = 3;
             } else if (diasACaducar == 3) {
-                return total / 2;
+                divisor = 2;
             }
 
-            return total;
+            return total / divisor;
         }
-
         @Override
         public String toString() {
             return super.toString() + " | Días a caducar: " + diasACaducar;
@@ -80,8 +82,13 @@ public class Producto {
             this.tipo = tipo;
         }
 
-        public String getTipo() { return tipo; }
-        public void setTipo(String tipo) { this.tipo = tipo; }
+        public String getTipo() { 
+        	return tipo; 
+        }
+        
+        public void setTipo(String tipo) { 
+        	this.tipo = tipo; 
+        }
 
         @Override
         public String toString() {
