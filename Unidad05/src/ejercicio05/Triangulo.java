@@ -46,6 +46,9 @@ public class Triangulo extends Poligono {
         this.lado3 = lado3;
     }
 
+    /**
+     * Calcular el área del triángulo con la fórmula de Herón
+     */
     @Override
     public double area() {
         double s = (lado1 + lado2 + lado3) / 2;

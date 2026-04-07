@@ -35,6 +35,9 @@ package ejercicio05;
 	        this.lado2 = lado2;
 	    }
 	
+	    /**
+	     * Calcular el área del rectángulo
+	     */
 	    @Override
 	    public double area() {
 	        return lado1 * lado2;
