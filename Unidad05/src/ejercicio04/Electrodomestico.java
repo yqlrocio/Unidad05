@@ -61,12 +61,23 @@ public class Electrodomestico {
 
         // Consumo energético
         switch (consumoEnergetico) {
-            case 'A': extra += 100; break;
-            case 'B': extra += 80; break;
-            case 'C': extra += 60; break;
-            case 'D': extra += 50; break;
-            case 'E': extra += 30; break;
-            case 'F': extra += 10; break;
+            case 'A': extra += 100; 
+            break;
+            
+            case 'B': extra += 80; 
+            break;
+            
+            case 'C': extra += 60; 
+            break;
+            
+            case 'D': extra += 50; 
+            break;
+            
+            case 'E': extra += 30; 
+            break;
+            
+            case 'F': extra += 10; 
+            break;
         }
 
         // Peso

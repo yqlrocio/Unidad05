@@ -1,4 +1,4 @@
-package ejercicio_interfaz_03;
+package ejercicioInterfaz03;
 
 public interface SerVivo {
 
