@@ -10,7 +10,6 @@ public class Futbolista {
 		
 	// CONSTRUCTOR 
 	public Futbolista(int numCamiseta, String nombre, int edad, int numGol) {
-		super();
 		this.numCamiseta = numCamiseta;
 		this.nombre = nombre;
 		this.edad = edad;
